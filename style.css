@@ -7,9 +7,15 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+html {
   scroll-behavior: smooth;
 }
 
@@ -29,14 +35,23 @@
 .header {
   width: 100%;
   height: calc(100vh - 50px);
-  background-image: url(/image/background_img.jpg);
+  background-image: url(/image/Tłosekcji_img2.jpg);
   background-size: cover;
+}
+
+.header-right {
+  display: none;
 }
 
 .header-shadow {
   width: 100%;
   height: calc(100vh - 50px);
   background-image: url(/image/main_image.png);
+}
+
+.container {
+  width: 100%;
+  margin: 0 3%;
 }
 
 .header-container {
@@ -51,13 +66,48 @@
 }
 
 .header-text {
-  font-size: 18px;
-  color: white;
-  text-decoration: none;
+  display: none;
 }
 
 .text-header {
   font-size: 36px;
+}
+
+.info-text {
+  color: var(--color-text);
+  margin: 0 15% 0 3%;
+}
+
+.services-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.services {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-services {
+  color: var(--color-text);
+  font-size: 26px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin: 76px 0 44px 0;
 }
 
 .header-text-content {
@@ -81,6 +131,9 @@
 .text-specialist {
   margin-bottom: 71px;
   font-size: 36px;
+  display: flex;
+  justify-content: center;
+  margin: 34px 0;
 }
 
 .photo {
@@ -105,6 +158,9 @@
 }
 
 .item {
+  width: 339px;
+  height: 332px;
+  margin: 18px;
   background-color: #f1f1f1;
   padding: 30px;
   color: #000000;
@@ -118,7 +174,16 @@
   justify-content: center;
 }
 
+.items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .dot {
+  height: 38px;
+  width: 38px;
   position: absolute;
   left: -11px;
   top: -11px;
@@ -129,6 +194,7 @@
 
 .footer {
   width: 100%;
+  height: 147px;
   display: flex;
   color: var(--color-text);
   background-color: var(--color-header-footer);
@@ -144,114 +210,54 @@
 
 .footer div {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+.icon-box {
+  margin-top: 15px;
 }
 
 .icon-box a {
   color: white;
   font-size: 31px;
+  margin: 0 9px;
 }
 
-@media screen and (max-width: 960px) {
-  .header-right {
-    display: none;
-  }
+.text-description {
+  text-align: justify;
+}
 
-  .header-text {
-    display: none;
-  }
-
-  .container {
-    width: 100%;
-    margin: 0 3%;
-  }
-
-  .info-text {
-    color: var(--color-text);
-    margin: 0 15% 0 3%;
-  }
-
-  .services-section {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
+@media (min-width: 769px) {
+  .items {
+    display: grid;
+    grid-template-rows: 194px 194px;
+    grid-template-columns: 198px 198px;
+    gap: 63px;
+    margin: 0 0 64px 0;
   }
 
   .service {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 40px;
+    flex-direction: row;
+    align-items: normal;
   }
 
-  .services {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .service-info {
+    margin-left: 60px;
   }
 
-  .text-services {
-    color: var(--color-text);
-    font-size: 26px;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    margin: 76px 0 44px 0;
-  }
-
-  .item {
-    width: 339px;
-    height: 332px;
-    margin: 18px;
-  }
-
-  .items {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .dot {
-    height: 38px;
-    width: 38px;
-  }
-
-  .footer {
-    height: 147px;
-  }
-
-  .footer div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .icon-box {
-    margin-top: 15px;
-  }
-
-  .icon-box a {
-    margin: 0 9px;
-  }
-
-  .text-specialist {
-    display: flex;
-    justify-content: center;
-    margin: 34px 0;
-  }
-
-  .text-description {
-    text-align: justify;
+  .service:nth-of-type(even) {
+    flex-direction: row-reverse;
+    .service-info {
+      margin-left: 0px;
+      margin-right: 60px;
+      text-align: right;
+    }
   }
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1024px) {
   .mobil-header {
     display: none;
   }
@@ -259,6 +265,13 @@
   .container {
     width: 960px;
     margin: 0 auto;
+  }
+
+  .header-text {
+    display: inline-block;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
   }
 
   .marg {
@@ -274,6 +287,7 @@
   }
 
   .header-right {
+    display: inline;
     float: right;
   }
 
@@ -284,6 +298,7 @@
   .info-text {
     width: 55%;
     color: var(--color-text);
+    margin: 0;
   }
 
   img {
@@ -294,6 +309,11 @@
     height: 71px;
   }
 
+  .footer div {
+    flex-direction: row;
+    justify-content:flex-start;
+  }
+
   .click-oferta:hover {
     background-color: #ffffff;
     color: black;
@@ -302,7 +322,6 @@
   .services {
     background-color: #405d78;
     width: 100%;
-    height: calc(100vh - 71px);
     display: flex;
     align-items: center;
   }
@@ -311,6 +330,7 @@
     color: var(--color-text);
     font-size: 36px;
     margin: 50px 0 70px 0;
+    justify-content: flex-start;
   }
 
   .items {
@@ -341,11 +361,13 @@
   }
 
   .icon-box {
+    margin-top: 0;
     margin-left: auto;
   }
 
   .icon-box a {
     color: white;
+    margin: 0;
     margin-left: 18px;
     font-size: 31px;
     transition: color 0.3s;
@@ -357,9 +379,12 @@
 
   .services-section {
     width: 100%;
-    height: 100vh;
     display: flex;
     align-items: center;
+  }
+
+  .text-specialist {
+    justify-content: flex-start;
   }
 
   .service-info {
@@ -375,8 +400,11 @@
   }
 
   .service {
-    display: flex;
-    align-items: center;
-    margin-bottom: 40px;
+    flex-direction: row;
+    align-items: normal;
+  }
+
+  .text-description {
+    text-align: unset;
   }
 }
