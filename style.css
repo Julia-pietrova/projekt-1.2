@@ -37,6 +37,7 @@ html {
   height: calc(100vh - 50px);
   background-image: url(/image/Tłosekcji_img2.jpg);
   background-size: cover;
+
 }
 
 .header-right {
@@ -46,7 +47,8 @@ html {
 .header-shadow {
   width: 100%;
   height: calc(100vh - 50px);
-  background-image: url(/image/main_image.png);
+  background-color: rgba(0,0,0, 0.2);
+  position: absolute;
 }
 
 .container {
@@ -58,7 +60,7 @@ html {
   color: var(--color-text);
 }
 
-.contenr-info-text {
+.content-info-text {
   margin: 0 auto;
   height: 100%;
   display: flex;
@@ -115,7 +117,7 @@ html {
   font-size: 18px;
 }
 
-.click-oferta {
+.click-offer {
   font-size: 18px;
   color: white;
   background-color: transparent;
@@ -126,6 +128,7 @@ html {
   overflow: hidden;
   outline: none;
   transition: color 1s, background-color 1s;
+  text-decoration: none;
 }
 
 .text-specialist {
@@ -145,6 +148,7 @@ html {
 
 .service-info {
   font-size: 18px;
+  margin-top: 40px;
 }
 
 .text-spec {
@@ -245,6 +249,7 @@ html {
 
   .service-info {
     margin-left: 60px;
+    margin-top: 20px;
   }
 
   .service:nth-of-type(even) {
@@ -291,7 +296,7 @@ html {
     float: right;
   }
 
-  .contenr-info-text {
+  .content-info-text {
     width: 960px;
   }
 
@@ -314,7 +319,7 @@ html {
     justify-content:flex-start;
   }
 
-  .click-oferta:hover {
+  .click-offer:hover {
     background-color: #ffffff;
     color: black;
   }
@@ -389,6 +394,7 @@ html {
 
   .service-info {
     margin-left: 60px;
+    margin-top: 40px;
   }
 
   .service:nth-of-type(even) {
